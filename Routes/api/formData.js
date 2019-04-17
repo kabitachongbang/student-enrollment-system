@@ -8,7 +8,10 @@ const myUrl = process.env.DB_URL || 'mongodb://localhost:27017/students';
 let studentCollection;
 
 MongoClient.connect(myUrl, function (err, client) {
-    if (err) return console.log('error');
+    if (err) {
+        console.log('error', err);
+        return;
+    }
 
     let db = client.db('students');
     studentCollection = db.collection('studentForm');
