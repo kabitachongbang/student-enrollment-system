@@ -11,23 +11,29 @@ body {
   display: flex;
 }
 
-.tableStyle tr, td, th {
+.originalBtn {
+  margin-right: 175px !important;
+}
+
+.tableStyle tr,
+td,
+th {
   border: 1px solid darkgreen;
   padding: 5px;
 }
 
 .sortorder:after {
-  content: '\25b2';
+  content: "\25b2";
 }
 
 .sortorder.descend:after {
-  content: '\25bc';
+  content: "\25bc";
 }
 
 .card {
   background-color: white;
   border-radius: 5px;
-  margin-top: 99px !important;
+  margin-top: 44px !important;
 }
 
 .errorField {

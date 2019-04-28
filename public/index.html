@@ -18,7 +18,7 @@
     <div class="container" ng-controller="MainController"><br>
         <h1 class="text-center text-info">Student Enrollment System</h1>
         <div class="content">
-            <div class="col-4 ">
+            <div class="col-md-4 ">
 
                 <div class="card  border-light">
                     <form class="app-form" ng-submit="submitForm()" name="studentForm" novalidate>
@@ -63,11 +63,14 @@
                     </form><br>
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-md-8">
                 <!-- <div>Sort By:   {{propertyName}};          descending order:   {{reverse?'Yes':'No'}}</div>
                 <br> -->
-                <button class="btn btn-outline-success ml-0" ng-click="propertyName=null; reverse=false">Set to
-                    Original State</button><br><br> 
+                <div class="clearfix">
+                <button class="originalBtn btn btn-outline-success float-right" ng-click="propertyName=null; reverse=false">Set to
+                    Original State</button>
+                </div>
+                    <div>
                 <table class="tableStyle bg-light">
                     <thead>
                         <tr>
@@ -105,8 +108,7 @@
                     </td>
                 </tr>
             </tbody>
-            </table>
-            <br><br>
+            </table></div>
         </div>
     </div>
     </div>

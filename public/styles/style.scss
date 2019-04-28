@@ -1,36 +1,40 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
 
-$primary-color:#5b6466;
-$spacer:11px;
+$primary-color: #5b6466;
+$spacer: 11px;
 
-body{
-    font:400 18px/20px sans-serif;
-    background:lighten($primary-color,55);
-    cursor:pointer;
+body {
+  font: 400 18px/20px sans-serif;
+  background: lighten($primary-color, 55);
+  cursor: pointer;
 }
-.content{
-    display: flex;
-}
-.tableStyle tr,td,th{
-border:1px solid darkgreen;
-padding:5px;
-
+.content {
+  display: flex;
 }
 
- .sortorder:after{
-content:'\25b2';
-
+.originalBtn {
+  margin-right: 175px !important;
 }
 
-.sortorder.descend:after{
-    content:'\25bc';
+.tableStyle tr,
+td,
+th {
+  border: 1px solid darkgreen;
+  padding: 5px;
+}
 
+.sortorder:after {
+  content: "\25b2";
 }
-.card{
-    background-color:lighten($primary-color,70);
-    border-radius: 5px;
-    margin-top:($spacer *9) !important;
+
+.sortorder.descend:after {
+  content: "\25bc";
 }
-.errorField{
-    border:3px solid red;
+.card {
+  background-color: lighten($primary-color, 70);
+  border-radius: 5px;
+  margin-top: ($spacer * 4) !important;
+}
+.errorField {
+  border: 3px solid red;
 }
