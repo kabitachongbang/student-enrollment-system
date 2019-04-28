@@ -93,7 +93,7 @@
     function removeSingleStudent(userId) {
       return $http({
         method: "DELETE",
-        url: "http://localhost:3000/api/formData/" + userId
+        url: BASE_URL + userId
       }).then(
         function(successResult) {
           console.log("successResult", successResult);
@@ -107,7 +107,7 @@
     function getSingleStudent(userId) {
       return $http({
         method: "GET",
-        url: "http://localhost:3000/api/formData/" + userId
+        url: BASE_URL + userId
       }).then(
         function(successResult) {
           return successResult;
@@ -121,7 +121,7 @@
     function updateSingleStudent(userId, user) {
       return $http({
         method: "PUT",
-        url: "http://localhost:3000/api/formData/" + userId,
+        url: BASE_URL + userId,
         data: user
       }).then(
         function(successResult) {
