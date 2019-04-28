@@ -64,7 +64,8 @@
                 </div>
             </div>
             <div class="col-8">
-                <pre>Sort By:{{propertyName}}; descending order:{{reverse}}</pre>
+                <div>Sort By:   {{propertyName}};          descending order:   {{reverse?'Yes':'No'}}</div>
+                <br>
                 <button class="btn btn-outline-success" ng-click="propertyName=null; reverse=false">Set to
                     Unsorted/Default</button><br><br>
                 <table class="tableStyle bg-light">
