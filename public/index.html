@@ -64,10 +64,10 @@
                 </div>
             </div>
             <div class="col-8">
-                <div>Sort By:   {{propertyName}};          descending order:   {{reverse?'Yes':'No'}}</div>
-                <br>
-                <button class="btn btn-outline-success" ng-click="propertyName=null; reverse=false">Set to
-                    Unsorted/Default</button><br><br>
+                <!-- <div>Sort By:   {{propertyName}};          descending order:   {{reverse?'Yes':'No'}}</div>
+                <br> -->
+                <button class="btn btn-outline-success ml-0" ng-click="propertyName=null; reverse=false">Set to
+                    Original State</button><br><br> 
                 <table class="tableStyle bg-light">
                     <thead>
                         <tr>
@@ -88,19 +88,19 @@
                     ng-click="sortBy('email')">Email</button>
                 <div class="sortorder float-right" ng-show="propertyName==='email'" ng-class={descend:reverse}></div>
             </th>
-            <th>Delete/Edit</th>
+            <th class="text-center">Action</th>
             </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="student in students | orderBy:propertyName:reverse track by $index">
-                    <td>{{$index+1}}</td>
+                    <td class="text-center">{{$index+1}}</td>
                     <td>{{student.name | uppercase}}</td>
                     <td>{{student.faculty | lowercase}}</td>
                     <td>{{student.email | lowercase}}</td>
                     <td>
                         <div class="btn-group">
-                        <button type="button" ng-click="deleteSingleUser(student._id)" class="btn btn-danger">delete</button>
-                        <button type="button" ng-click="updateSingleUser(student)" class="btn btn-info">edit</button>
+                        <button type="button" ng-click="deleteSingleUser(student._id)" class="btn btn-danger">Delete</button>
+                        <button type="button" ng-click="updateSingleUser(student)" class="btn btn-info">Edit</button>
                          </div>
                     </td>
                 </tr>
